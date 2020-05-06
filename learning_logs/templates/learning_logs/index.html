@@ -1,18 +1,18 @@
 {% extends "learning_logs/base.html" %}
 
-<a href ="{% url 'learning_logs:index' %}">Learning Log </a> 
-</p>
+{% block page_header %}
+    <div class="jumbotron">
+        <h1 class="display-3">Track your learning.</h1>    <!--The h1 class is a first-level header, and the
+            display-3 selector adds a thinner and taller look to this particular header-->
 
-{%block content%} 
+        <p class="lead">Learning Log helps you keep track of your learning, for any topic you're learning about.
+                                                                                                     By SSF</p>
+        
+        <a class="btn btn-lg btn-primary" href="{% url 'users:login' %}"
+            role="button">Login &raquo;</a>
+        
+        <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"
+            role="button">Register &raquo;</a>
+    </div>
 
-<p>Learning Log</p>
-
-<p>
-    
-    Learning Log helps you keep track of your learning, for any topic you're learning about.
-                                                                                           By SSF
-   
-</p>
-
-
-{% endblock content%}
+{% endblock page_header %}
